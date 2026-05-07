@@ -15,6 +15,7 @@ vim.lsp.enable({
 	"html",     -- INSTALL: `npm i -g vscode-langservers-extracted`
 	"intelephense", -- INSTALL: `npm install -g intelephense`
 	"clangd",    -- Preinstalled on macOS (Xcode CLT), or: `brew install llvm`
+	"pyright",   -- INSTALL: `npm install -g pyright` or `brew install pyright`
 })
 
 vim.lsp.config("html", {

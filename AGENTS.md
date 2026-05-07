@@ -30,7 +30,7 @@ brew install lua-language-server marksman llm
 
 ### npm
 ```bash
-npm install -g @tailwindcss/language-server vscode-langservers-extracted intelephense
+npm install -g @tailwindcss/language-server vscode-langservers-extracted intelephense pyright
 ```
 
 ### Blink.cmp (completion)
@@ -48,7 +48,10 @@ cd ~/.local/share/nvim/site/pack/core/opt/blink.cmp && cargo build --release
 - `gopls` (Go), `lua_ls` (Lua), `templ` (Templ)
 - `tailwindcss` (Tailwind), `jsonls` (JSON), `cssls` (CSS), `html` (HTML)
 - `marksman` (Markdown), `llm_ls` (LLM), `intelephense` (PHP)
-- `clangd` (C/C++)
+- `clangd` (C/C++), `pyright` (Python)
+
+## Markdown Code Blocks
+Markdown code block highlighting uses `markdown` + `markdown_inline` Treesitter parsers with language injection via `vim.treesitter.language.register()`. Common code fence languages (`py`, `js`, `ts`, `sh`, `yml`, etc.) are registered for auto-highlighting.
 
 ## AI Integration
 - `agentic.nvim`: main agent interface (provider: opencode-acp)
