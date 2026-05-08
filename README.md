@@ -5,12 +5,12 @@ A modern Neovim configuration with LSP support, AI integration, and extensive pl
 ## Features
 
 - **Plugin Management**: Built-in `vim.pack.add()` (no lazy.nvim or packer)
-- **LSP**: 11 language servers configured via `vim.lsp.enable()`
+- **LSP**: 12 language servers configured via `vim.lsp.enable()`
 - **Completion**: blink.cmp with rust-based fuzzy matching
 - **AI Integration**: agentic.nvim for chat, minuet-ai.nvim for inline completion
 - **Navigation**: Telescope (fuzzy finder), Harpoon (quick file switching), Oil (file explorer)
 - **Git**: Lazygit integration, mini.diff for diff viewing
-- **Syntax**: Treesitter with 9 parsers, markdown preview and rendering
+- **Syntax**: Treesitter with 21 parsers, markdown preview and rendering
 - **Theme**: Gruvbox with transparent background
 - **Sessions**: Auto-save/load with `.session.vim`
 
@@ -44,7 +44,7 @@ brew install llm
 ```bash
 npm install -g @tailwindcss/language-server
 npm install -g vscode-langservers-extracted
-npm install -g intelephense
+npm install -g intelephense pyright
 ```
 
 ### Blink.cmp Installation
@@ -69,6 +69,7 @@ cargo build --release
 | `html` | `npm i -g vscode-langservers-extracted` | HTML |
 | `intelephense` | `npm install -g intelephense` | PHP |
 | `clangd` | Preinstalled (macOS) or `brew install llvm` | C/C++ |
+| `pyright` | `npm install -g pyright` or `brew install pyright` | Python |
 
 ### Special LSP Configuration
 
@@ -125,7 +126,9 @@ cargo build --release
 
 ### Treesitter Parsers
 
-`typescript`, `html`, `css`, `javascript`, `svelte`, `go`, `gomod`, `templ`, `php`
+`typescript`, `html`, `css`, `javascript`, `svelte`, `go`, `gomod`, `templ`, `php`,
+`markdown`, `markdown_inline`, `lua`, `bash`, `python`, `json`, `yaml`, `toml`,
+`vim`, `vimdoc`, `diff`, `c`
 
 ## Keymaps
 
