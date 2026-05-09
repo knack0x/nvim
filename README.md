@@ -5,7 +5,7 @@ A modern Neovim configuration with LSP support, AI integration, and extensive pl
 ## Features
 
 - **Plugin Management**: Built-in `vim.pack.add()` (no lazy.nvim or packer)
-- **LSP**: 12 language servers configured via `vim.lsp.enable()`
+- **LSP**: 13 language servers configured via `vim.lsp.enable()`
 - **Completion**: blink.cmp with rust-based fuzzy matching
 - **AI Integration**: agentic.nvim for chat, minuet-ai.nvim for inline completion
 - **Navigation**: Telescope (fuzzy finder), Harpoon (quick file switching), Oil (file explorer)
@@ -44,7 +44,7 @@ brew install llm
 ```bash
 npm install -g @tailwindcss/language-server
 npm install -g vscode-langservers-extracted
-npm install -g intelephense pyright
+npm install -g intelephense pyright typescript-language-server
 ```
 
 ### Blink.cmp Installation
@@ -70,6 +70,7 @@ cargo build --release
 | `intelephense` | `npm install -g intelephense` | PHP |
 | `clangd` | Preinstalled (macOS) or `brew install llvm` | C/C++ |
 | `pyright` | `npm install -g pyright` or `brew install pyright` | Python |
+| `ts_ls` | `npm install -g typescript-language-server` | JavaScript / TypeScript |
 
 ### Special LSP Configuration
 

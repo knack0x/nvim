@@ -36,6 +36,7 @@ echo "Installing npm packages..."
 npm install -g @tailwindcss/language-server
 npm install -g vscode-langservers-extracted
 npm install -g intelephense
+npm install -g typescript-language-server
 echo "✓ npm packages installed"
 echo
 
