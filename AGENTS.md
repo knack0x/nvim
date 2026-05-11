@@ -2,7 +2,7 @@
 
 ## Structure
 - `init.lua` -> `lua/init.lua` -> loads options, lsp, plugins, keymaps
-- `lua/.plugins/` -> organized plugin configs (core, lsp, git, etc.)
+- `lua/plugins/` -> organized plugin configs (diagnostics, ui, git, etc.)
 - `lua/keymaps/` -> keybinding modules
 - `nvim-pack-lock.json` -> pins all plugin revisions
 

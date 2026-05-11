@@ -112,6 +112,7 @@ cargo build --release
 
 | Plugin | Source | Description |
 |--------|--------|-------------|
+| **todo-comments.nvim** | `folke/todo-comments.nvim` | TODO/FIXME/NOTE comment highlighting |
 | **trouble.nvim** | `folke/trouble.nvim` | Diagnostics UI |
 | **gruvbox.nvim** | `ellisonleao/gruvbox.nvim` | Gruvbox colorscheme |
 | **mini.icons** | `nvim-mini/mini.icons` | Icons for UI elements |

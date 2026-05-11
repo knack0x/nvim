@@ -1,5 +1,6 @@
 require("plugins.ai.agentic")
 require("plugins.completion.blink")
+require("plugins.diagnostics.todo-comments")
 require("plugins.diagnostics.trouble")
 require("plugins.filesystem.harpoon")
 require("plugins.filesystem.oil")
