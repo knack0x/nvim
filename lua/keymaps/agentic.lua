@@ -27,3 +27,8 @@ end, { desc = "Add line diagnostic to Agentic" })
 vim.keymap.set("n", "<leader>aD", function()
   require("agentic").add_buffer_diagnostics()
 end, { desc = "Add all buffer diagnostics to Agentic" })
+
+-- Stop Generation
+vim.keymap.set("n", "<leader>as", function()
+  require("agentic").stop_generation()
+end, { desc = "Stop current Agentic generation" })
