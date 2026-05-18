@@ -132,6 +132,21 @@ require("agentic").setup({
 	},
 })
 
+-- Monkey-patch MessageWriter to suppress thought chunks from chat display.
+-- This lives in the user config, so it survives plugin reinstalls.
+-- The thinking animation still runs — only the visible output is hidden.
+do
+	local MessageWriter = require("agentic.ui.message_writer")
+	local original_write = MessageWriter.write_message_chunk
+
+	MessageWriter.write_message_chunk = function(self, update)
+		if update.sessionUpdate == "agent_thought_chunk" then
+			return
+		end
+		return original_write(self, update)
+	end
+end
+
 -- Command: :UsageLog — opens token usage log window
 vim.api.nvim_create_user_command("UsageLog", open_usage_log, {
 	desc = "Open agentic.nvim token usage log",
