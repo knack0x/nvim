@@ -3,6 +3,11 @@ vim.keymap.set({ "n", "v", "i" }, "<C-\\>", function()
 	require("agentic").toggle()
 end, { desc = "Toggle Agentic Chat" })
 
+-- Open Token Usage Log
+vim.keymap.set("n", "<leader>au", function()
+	vim.cmd("UsageLog")
+end, { desc = "Open Agentic Token Usage Log" })
+
 -- Add file or selection to Context
 vim.keymap.set({ "n", "v" }, "<C-'>", function()
 	require("agentic").add_selection_or_file_to_context()
