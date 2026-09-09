@@ -16,7 +16,7 @@ require("which-key").setup({
 })
 
 require("which-key").add({
-	{ "<space>a",  group = "Agentic" },
+	{ "<space>a",  group = "AI" },
 	{ "<space>e",  group = "Editor" },
 	{ "<space>f",  group = "Find" },
 	{ "<space>s",  group = "Session" },
