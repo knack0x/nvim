@@ -29,7 +29,7 @@ vim.pack.add({
 --})
 require("pi").setup({
   provider = "omlx",
-  model = "Qwen3.6-35B-A3B-Uncensored-Heretic-MLX-6bit",
-  thinking = "medium",
+  model = "Justanut/Ornith-1.0-35B-uncensored-heretic-oQ6e",
+  thinking = "high",
   system_prompt = "Sei extrem knapp. Keine Erklärungen, nur Code. Keine Begrüßungen, keine Zusammenfassungen. Direkte Antworten.",
 })
