@@ -1,3 +1,4 @@
+require("keymaps.ai")
 require("keymaps.harpoon")
 require("keymaps.explorer")
 require("keymaps.telescope")
