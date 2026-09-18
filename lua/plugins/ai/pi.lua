@@ -29,7 +29,8 @@ vim.pack.add({
 --})
 require("pi").setup({
   provider = "omlx",
-  model = "Justanut/Ornith-1.0-35B-uncensored-heretic-oQ6e",
+  model = "Ornith-1.5-35B-A3B-uncensored-MLX-6bit",
   thinking = "high",
-  system_prompt = "Sei extrem knapp. Keine Erklärungen, nur Code. Keine Begrüßungen, keine Zusammenfassungen. Direkte Antworten.",
+  system_prompt = "You are a helpful assistant.",
+  append_system_prompt = "Always respond concisely.",
 })
