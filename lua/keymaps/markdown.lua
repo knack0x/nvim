@@ -1,11 +1,11 @@
 -- Markdown keymaps
 -- Markdown-specific operations
 
-vim.keymap.set("n", "<space>mp", function()
+vim.keymap.set("n", "<space>cmp", function()
 	vim.cmd("MarkdownPreview")
 end, { desc = "Start markdown preview" })
 
-vim.keymap.set("n", "<space>ms", function()
+vim.keymap.set("n", "<space>cms", function()
 	vim.cmd("MarkdownPreviewStop")
 end, { desc = "Stop markdown preview" })
 
