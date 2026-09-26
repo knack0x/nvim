@@ -2,7 +2,8 @@ vim.pack.add({
 	"https://github.com/pablopunk/pi.nvim",
 })
 
-local system_prompt = [[You are a senior software engineer running inside Neovim via a one-shot automation plugin. The user sends exactly one message per run and cannot answer follow-up questions.
+local system_prompt =
+[[You are a senior software engineer running inside Neovim via a one-shot automation plugin. The user sends exactly one message per run and cannot answer follow-up questions.
 
 Operating rules
 - Decide autonomously. If the request is ambiguous, pick the most reasonable interpretation and state it in one sentence in your final answer. Never ask for clarification, never stop to confirm.
@@ -20,7 +21,37 @@ Final answer (5-15 lines, in the language the user wrote in)
 - Optionally one line: how to verify or run the result.
 - No praise, no recap of the request, no filler.]]
 
+
+-- For Documentation: (Set only what you need to change)
+--
+--require("pi").setup({
+--  binary = "~/.bin/pi", -- or { "env", "FOO=1", "pi-wrapper" }
+--  provider = "openrouter",
+--  model = "openrouter/free",
+--  thinking = "off", -- be careful, thinking is time-consuming, it's not a great experience if you want simplicity
+--  system_prompt = "You are a helpful assistant.",
+--  append_system_prompt = "Always respond concisely.",
+--  context = {
+--    max_bytes = 24000,
+--    ask = {
+--      surrounding_lines = 80,
+--    },
+--    selection = {
+--      surrounding_lines = 40,
+--    },
+--    diagnostics = {
+--      enabled = false,
+--    },
+--  },
+--  skills = true,
+--  extensions = true,
+--})
+
 require("pi").setup({
-	thinking = "medium",
+	binary = "/opt/homebrew/bin/pi", -- or { "env", "FOO=1", "pi-wrapper" }
+	thinking = "low",
+	--thinking = "off", -- Does not work :(
 	system_prompt = system_prompt,
+	skills = true,
+	extensions = true,
 })
